@@ -1,5 +1,7 @@
 import { VictoryChart, VictoryGroup, VictoryLegend, VictoryLabel, VictoryAxis, VictoryBar } from 'victory';
-import { StudentData } from '../Students/StudentData';
+import { StudentDataNew } from '../Files/StudentData';
+
+const StudentData = StudentDataNew.StudentData;
 
 const sum = (a, b) => {
     return {
@@ -25,7 +27,6 @@ const projectList = StudentData.map((student) => {
 const projectListNew = projectList.filter((value, index, self) => {
     return self.indexOf(value) === index;
 });
-
 
 const allData = [];
 projectListNew.forEach((projectname) => {
