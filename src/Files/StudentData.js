@@ -3361,22 +3361,22 @@ const StudentData = [
     }
 ]
 
-// const names = StudentData.map((student) => {
-//     return student.studentname;
-// });
+const names = StudentData.map((student) => {
+    return student.studentname;
+});
 
-// const filteredNames = names.filter((value, index, self) => {
-//     return self.indexOf(value) === index;
-// });
+const namesChecked = names.filter((value, index, self) => {
+    return self.indexOf(value) === index;
+});
 
-// const data = {
-//     StudentData: StudentData,
-//     studentnames: filteredNames
-// };
+const StudentDataNew = {
+    StudentData: StudentData,
+    studentnames: namesChecked
+};
 
-// export { data };
+export { StudentDataNew };
 
-export { StudentData };
+// export { StudentData };
 
 
 
