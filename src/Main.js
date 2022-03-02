@@ -1,11 +1,8 @@
-import { BrowserRouter, Router, Routes, Route } from "react-router-dom"
-// import StudentChart from './Components/StudentChart';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Students from './Files/Student';
 import Navigation from './Navigation';
 import Home from './Components/Home';
 import React from "react"
-
-import Students from './Files/Student';
-
 
 function Main() {
     return (
@@ -13,13 +10,8 @@ function Main() {
             <Navigation />
             <Routes>
 
-
                 <Route index element={<Home />} />
-                {/* <Route index element={<Home />} /> */}
-
-                <Route index element={<Students />} />
-                {/* <Route path="students/:studentname" element={Students} /> */}
-                {/* <Route path="../Students/:studentname" element={Students} /> */}
+                <Route path="students/:studentname" element={<Students />} />
 
             </Routes>
         </BrowserRouter>
