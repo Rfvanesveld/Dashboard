@@ -1,4 +1,4 @@
-const StudentData = [
+const studentData = [
     {
         studentname: "Evelyn",
         projectname: "SCRUM",
@@ -3361,7 +3361,7 @@ const StudentData = [
     }
 ]
 
-const names = StudentData.map((student) => {
+const names = studentData.map((student) => {
     return student.studentname;
 });
 
@@ -3369,17 +3369,30 @@ const namesChecked = names.filter((value, index, self) => {
     return self.indexOf(value) === index;
 });
 
-const StudentDataNew = {
-    StudentData: StudentData,
-    studentnames: namesChecked
+const studentDataNew = {
+    studentData: studentData,
+    studentNames: namesChecked
 };
 
-export { StudentDataNew };
-
-// export { StudentData };
+export { studentDataNew };
 
 
+//  CORRECT VERSION  .............................
 
+// const names = studentData.map((student) => {
+//     return student.studentname;
+// });
+
+// const namesChecked = names.filter((value, index, self) => {
+//     return self.indexOf(value) === index;
+// });
+
+// const studentDataNew = {
+//     studentData: studentData,
+//     studentNames: namesChecked
+// };
+
+// export { studentDataNew };
 
 
 

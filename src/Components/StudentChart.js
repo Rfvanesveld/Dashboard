@@ -1,7 +1,7 @@
 import { VictoryChart, VictoryGroup, VictoryLegend, VictoryLabel, VictoryAxis, VictoryBar } from 'victory';
-import { StudentDataNew } from '../Files/StudentData';
+import { studentDataNew } from '../Files/StudentData';
 
-const StudentData = StudentDataNew.StudentData;
+const studentData = studentDataNew.studentData;
 
 const sum = (a, b) => {
     return {
@@ -20,7 +20,7 @@ const getAverage = (array) => {
     };
 };
 
-const projectList = StudentData.map((student) => {
+const projectList = studentData.map((student) => {
     return student.projectname;
 });
 
@@ -30,7 +30,7 @@ const projectListNew = projectList.filter((value, index, self) => {
 
 const allData = [];
 projectListNew.forEach((projectname) => {
-    const values = StudentData.filter((value) => {
+    const values = studentData.filter((value) => {
         return value.projectname === projectname;
     });
 
@@ -47,7 +47,7 @@ const StudentChart = () => {
         >
 
             <VictoryGroup
-                offset={160 / StudentData.length}>
+                offset={160 / studentData.length}>
 
                 <VictoryBar
                     data={allData}

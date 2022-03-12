@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <div className='footer'>
-            {/* RF van Esveld */}
+            made by RF van Esveld
         </div>
     )
 }
