@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import StudentPage from "./Components/StudentPage";
-import Students from './Files/Students';
-import Navigation from './Navigation';
+import Studentpage from './Components/StudentPage'
+import StudentSidebar from './Components/Navigation'
+import Students from './Files/Student';
+import Navigation from './Navigation'
 import Home from './Components/Home';
 
 import React from "react"
@@ -10,12 +11,12 @@ function Main() {
     return (
         <BrowserRouter>
 
-            <Navigation />
+            {/* <Navigation /> */}
+            <StudentSidebar />
             <Routes>
 
-                <Route index element={<Home />} />
-                <Route path="students/:studentname" element={<Students />} />
-                <Route path='/studentpage' element={<StudentPage />} />
+                <Route index element={Home} />
+                <Route path="student/:name" element={Students} />
 
             </Routes>
         </BrowserRouter>
